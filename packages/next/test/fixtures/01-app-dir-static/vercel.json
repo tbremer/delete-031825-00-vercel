@@ -1,0 +1,20 @@
+{
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "probes": [
+    {
+      "path": "/blog/about",
+      "status": 200,
+      "mustContain": "about"
+    },
+    {
+      "path": "/404",
+      "status": 404,
+      "mustContain": "404"
+    }
+  ]
+}
